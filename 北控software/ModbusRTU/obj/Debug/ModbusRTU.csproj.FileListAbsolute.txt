@@ -1,0 +1,18 @@
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\ModbusRTU.exe
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\ModbusRTU.pdb
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\Advantech.Adam.dll
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\Advantech.Common.dll
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\Advantech.Protocol.dll
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\Advantech.Adam.xml
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\Advantech.Common.xml
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\bin\Debug\Advantech.Protocol.xml
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\obj\Debug\ResolveAssemblyReference.cache
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\obj\Debug\ModbusRTU.Form1.resources
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\obj\Debug\GenerateResource.read.1.tlog
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\obj\Debug\GenerateResource.write.1.tlog
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\obj\Debug\ModbusRTU.exe
+C:\Program Files\Advantech\Adam.NET Class Library\VS2003\Samples\Win32\VC#\ModbusRTU\obj\Debug\ModbusRTU.pdb
+F:\xxm\project\SINOPEC\项目2\昌平晚上\研华adam-4117\Adam.NET LabVIEW Example_ADAM-XX17_Log\ModbusRTU\ModbusRTU\obj\Debug\ModbusRTU.exe
+F:\xxm\project\SINOPEC\项目2\昌平晚上\研华adam-4117\Adam.NET LabVIEW Example_ADAM-XX17_Log\ModbusRTU\ModbusRTU\obj\Debug\ModbusRTU.pdb
+C:\Users\SuJinhai\Desktop\新建文件夹\远望景盛\远望景盛\北控软件源代码\北控软件源代码\北控software\ModbusRTU\obj\Debug\ModbusRTU.exe
+C:\Users\SuJinhai\Desktop\新建文件夹\远望景盛\远望景盛\北控软件源代码\北控软件源代码\北控software\ModbusRTU\obj\Debug\ModbusRTU.pdb

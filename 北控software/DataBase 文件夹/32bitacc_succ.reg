@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\ODBC Data Sources]
+"sinopec"="Microsoft Access Driver (*.mdb, *.accdb)"
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\sinopec]
+"Driver"="C:\\Windows\\System32\\odbcjt32.dll"
+"DBQ"=" "
+"DriverId"=dword:00000019
+"FIL"="MS Access;"
+"SafeTransactions"=dword:00000000
+"UID"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\sinopec\Engines]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\sinopec\Engines\Jet]
+"ImplicitCommitSync"=""
+"MaxBufferSize"=dword:00000800
+"PageTimeout"=dword:00000005
+"Threads"=dword:00000003
+"UserCommitSync"="Yes"
+

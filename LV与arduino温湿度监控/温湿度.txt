@@ -1,0 +1,101 @@
+#include <Wire.h>
+#include <SHT1x.h>
+
+#define temp_Command          0x10   //采集命令字
+#define humidity_Command      0x20   //A1采集命令字
+
+#define illumination_Command  0x40   //D0采集命令字
+// GY-30
+// BH1750FVI
+// in ADDR 'L' mode 7bit addr
+#define ADDR 0b0100011
+// addr 'H' mode
+// #define ADDR 0b1011100
+
+// Specify data and clock connections and instantiate SHT1x object
+#define dataPin  A3
+#define clockPin A2
+SHT1x sht1x(dataPin, clockPin);
+
+byte comdata[3]={0};      //定义数组数据，存放串口接收数据
+float temp_c;
+float humidity;
+int dustPin=0;
+int dustVal=0;
+
+int Illumination_Val = 0;
+
+void receive_data(void);      //接受串口数据
+void test_do_data(void);      //测试串口数据是否正确，并更新数据
+
+void setup()
+{
+  Serial.begin(9600);      
+  Wire.begin(); 
+  Wire.beginTransmission(ADDR);
+  Wire.write(0b00000001);
+  Wire.endTransmission();
+}
+void loop()
+{
+  while (Serial.available() > 0)   //不断检测串口是否有数据
+   {
+        receive_data();            //接受串口数据
+        test_do_data();            //测试数据是否正确并更新标志位
+   }
+}
+void receive_data(void)       
+{
+   int i ;
+   for(i=0;i<3;i++)
+   {
+      comdata[i] =Serial.read();
+      //延时一会，让串口缓存准备好下一个字节，不延时可能会导致数据丢失，
+       delay(2);
+   }
+}
+ 
+void test_do_data(void)
+{
+  if(comdata[0] == 0x55)            //0x55和0xAA均为判断是否为有效命令
+   {
+     if(comdata[1] == 0xAA)
+     {
+        switch(comdata[2])
+          {   
+            case temp_Command:   
+                temp_c = sht1x.readTemperatureC();
+                Serial.print(temp_c, 2);  
+                 break;
+            case humidity_Command:   
+                 humidity = sht1x.readHumidity();
+                 Serial.print(humidity,2);
+                 break;
+           
+            case illumination_Command:                  
+                   // reset
+                  Wire.beginTransmission(ADDR);
+                  Wire.write(0b00000111);
+                  Wire.endTransmission(); 
+                  delay(100); 
+                  Wire.beginTransmission(ADDR);
+                  Wire.write(0b00100000);
+                  Wire.endTransmission(); 
+              // typical read delay 120ms
+                  delay(120); 
+                  Wire.requestFrom(ADDR, 2); // 2byte every time 
+                  for (Illumination_Val=0; Wire.available()>=1; ) {
+                  char c = Wire.read();
+                  //Serial.println(c, HEX);
+                  Illumination_Val = (Illumination_Val << 8) + (c & 0xFF);
+                  } 
+                  Illumination_Val = Illumination_Val / 1.2;
+                  Serial.println(Illumination_Val);                          
+                 break;               
+          }
+       }
+   }
+}
+ 
+
+
